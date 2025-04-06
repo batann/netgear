@@ -48,21 +48,6 @@
 <p align="right">(<a href="#netgear-top">back to top</a>)</p>
 
 
-
-### Built With
-
-* [![Next][Next.js]][Next-url]
-* [![React][React.js]][React-url]
-* [![Vue][Vue.js]][Vue-url]
-* [![Angular][Angular.io]][Angular-url]
-* [![Svelte][Svelte.dev]][Svelte-url]
-* [![Laravel][Laravel.com]][Laravel-url]
-* [![Bootstrap][Bootstrap.com]][Bootstrap-url]
-* [![JQuery][JQuery.com]][JQuery-url]
-
-<p align="right">(<a href="#netgear-top">back to top</a>)</p>
-
-
 ### Prerequisites
 The utility only requires very common UNIX tools:
 
@@ -79,10 +64,9 @@ Clone the repository and you are good to go.
 
 <p align="right">(<a href="#netgear-top">back to top</a>)</p>
 
-# I Netgear 
-
+# I) Netgear-m1.sh 
 <!-- USAGE EXAMPLES -->
-## Usage
+  ## Usage
 ```
 Usage:
   netgear-m1.sh status [--json]
@@ -103,13 +87,13 @@ Commands:
   disconnect Turn cellular data connection off.
   reconnect  Turn cellular data connection off and on again.
 
-By default the utility connects router at IP address 192.168.1.1.
-Another IP address can be provided environment variable NETGEAR_M1_IP.
+      By default the utility connects router at IP address 192.168.1.1.
+      Another IP address can be provided environment variable NETGEAR_M1_IP.
 ```
 
-## Commands
+  ## Commands
 
-The utility has the following commands for controlling the router:
+      The utility has the following commands for controlling the router:
 
 - status
 - reboot
@@ -117,23 +101,23 @@ The utility has the following commands for controlling the router:
 - connect
 - reconnect
 
-All commands except status require admin password of the router. The utility will ask for the password. The utility does not save the password, but it stores a session cookie received from the router to a temporary file, which is deleted when the utility exists.
+      All commands except status require admin password of the router. The utility will ask for the password. The utility does not save the password, but it stores a session cookie received from the router to a temporary file, which is deleted when the utility exists.
 
-If you want to run the utility with no user interaction, you can pipe the password to the utility like this:
+      If you want to run the utility with no user interaction, you can pipe the password to the utility like this:
 
 ```
 $ echo $PASSWORD | ./netgear-m1.sh reboot
 ```
 
-If your router is not at IP address `192.168.1.1`, please provide alternative IP address in environment variable `NETGEAR_M1_IP`. For example, like this:
+      If your router is not at IP address `192.168.1.1`, please provide alternative IP address in environment variable `NETGEAR_M1_IP`. For example, like this:
 
 ```
 $ NETGEAR_M1_IP=10.0.0.1 ./netgear-m1.sh reboot
 ```
 
-### status
+  ### status
 
-This command returns basic information about the status of the router. Status information can be queried without the admin password.
+      This command returns basic information about the status of the router. Status information can be queried without the admin password.
 
 ```
 $ ./netgear-m1.sh status
@@ -145,15 +129,15 @@ $ ./netgear-m1.sh status
 Router connection status: Connected
 ```
 
-The `--json` flag can be used to store all status information provided by the router.
+      The `--json` flag can be used to store all status information provided by the router.
 
 ```
 $ ./netgear-m1.sh status --json > model.json
 ```
 
-### ping
+  ### ping
 
-This command sends pings to the network adapter of the router until it responds. After that it waits for the router service API to be available.
+      This command sends pings to the network adapter of the router until it responds. After that it waits for the router service API to be available.
 
 ```
 $ ./netgear-m1.sh ping
@@ -162,9 +146,9 @@ Waiting for router services
 Router is up
 ```
 
-### reboot
+  ### reboot
 
-This command reboots the router
+      This command reboots the router
 
 ```
 $ ./netgear-m1.sh reboot
@@ -178,9 +162,9 @@ Waiting for router services
 Router is up
 ```
 
-### disconnect
+  ### disconnect
 
-This command disconnects the cellular data connection of the router.
+      This command disconnects the cellular data connection of the router.
 
 ```
 $ ./netgear-m1.sh disconnect
@@ -190,10 +174,10 @@ Disconnected cellular data
 ```
 
 ![mobile data connection disconnected](https://raw.githubusercontent.com/mtreinik/netgear-m1/main/docs/disconnected.png)
+  
+  ### connect
 
-### connect
-
-This command connects the cellular data connection of the router.
+      This command connects the cellular data connection of the router.
 
 ```
 $ ./netgear-m1.sh connect
@@ -204,9 +188,9 @@ Connected cellular data
 
 ![mobile data connection connected](https://raw.githubusercontent.com/mtreinik/netgear-m1/main/docs/connected.png)
 
-### reconnect
+  ### reconnect
 
-This command disconnects and connects the cellular data connection of the router.
+      This command disconnects and connects the cellular data connection of the router.
 
 ```
 $ ./netgear-m1.sh reconnect
@@ -217,19 +201,19 @@ Connected cellular data
 ```
 
 
-# II Data Transfer Monitor
+# II) Data Transfer Monitor
 
-## Usage
+  ## Usage
 
-1. Change to directory `src`
-1. Start script `./get-data.sh`
-1. Open `src/index.html` in browser
+      1. Change to directory `src`
+      1. Start script `./get-data.sh`
+      1. Open `src/index.html` in browser
 
-## Getting the data
+  ## Getting the data
 
-The script `get-data.sh` uses the [netgear-m1.sh](https://github.com/mtreinik/netgear-m1) utility to query the amount of data transferred by the mobile router every ten seconds.
+      The script `get-data.sh` uses the [netgear-m1.sh](https://github.com/mtreinik/netgear-m1) utility to query the amount of data transferred by the mobile router every ten seconds.
 
-The script appends the data with timestamps to a file in a format that is executable JavaScript code:
+      The script appends the data with timestamps to a file in a format that is executable JavaScript code:
 
 ```
 const d = []
@@ -238,9 +222,9 @@ d.push([new Date('2020-11-07T21:10:50'), 149314387262])
 d.push([new Date('2020-11-07T21:11:09'), 149326465165])
 ```
 
-## Visualizing the data
+  ## Visualizing the data
 
-The data is visualized on a HTML page by using [Google Charts](https://developers.google.com/chart)
+      The data is visualized on a HTML page by using [Google Charts](https://developers.google.com/chart)
 
 ![example chart](https://raw.githubusercontent.com/mtreinik/data-transfer-monitor/main/docs/data_transferred.png)
 
