@@ -61,8 +61,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
-
+ <img src="docs/netgear.png" width="512" height="512">
 ###### cloned from https://github.com/mtreinik/data-transfer-monitor.git
   ## The Project consists of two main scripts:
   1) netgeat-m1.sh [[ Script to control router via cli ]]
