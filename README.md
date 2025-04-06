@@ -7,7 +7,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/batann/netgear/docs/logo.png">
-    <img src="docs/logo.png" alt="Logo" width="900" height="250">
+    <img src="docs/logo.png" alt="Logo" width="518" height="518">
   </a>
 
 <h3 align="center">LC-Linux</h3>
@@ -61,7 +61,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
- <img src="docs/netgear.png" width="512" height="512">
+ <img src="docs/netgear.png" width="474" height="158">
 ###### cloned from https://github.com/mtreinik/data-transfer-monitor.git
   ## The Project consists of two main scripts:
   1) netgeat-m1.sh [[ Script to control router via cli ]]
