@@ -7,7 +7,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/batann/netgear/docs/logo.png">
-    <img src="docs/logo.png" alt="Logo" width="512" height="512">
+    <img src="docs/logo.png" alt="Logo" width="900" height="250">
   </a>
 
 <h3 align="center">LC-Linux</h3>
