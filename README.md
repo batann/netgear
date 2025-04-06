@@ -1,5 +1,5 @@
 # netgear
-###### cloned from https://github.com/mtreinik/data-transfer-monitor.git
+
 
 <a id="netgear-top"></a>
 
@@ -63,7 +63,17 @@
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `batann`, `netgear`, `twitter_handle`, `linkedin_username`, `email_client`, `email`, `project_title`, `project_description`
+###### cloned from https://github.com/mtreinik/data-transfer-monitor.git
+  ## The Project consists of two main scripts:
+  1) netgeat-m1.sh [[ Script to control router via cli ]]
+       #### `netgear-m1.sh` is a command line utility for querying and controlling a [Netgear M1 router](https://www.netgear.com/home/products/mobile-broadband/mobilerouters/MR1100.aspx).
+  2) get-data.sh [[ Data transfer monitor ]]
+       ###   This is a simple utility for querying data transfer of a mobile router and plotting the transfer rates in a browser.
+
+
+
+
+
 
 <p align="right">(<a href="#netgear-top">back to top</a>)</p>
 
